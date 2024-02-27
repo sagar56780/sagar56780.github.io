@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.pdiiin,#ftiiin{
+    width: 50%;
+}
+#btn{
+    position: absolute;
+    margin-top: -200px;
+    left: 48%;
+    background-color: black;
+    height: 3em;
+    width: 10em;
+    color: white;
+    border-radius: 5em;
+    border: none;
+    font-size: large;
+}
+#ad{
+  
+   
+    background-color: black;
+    height: 3em;
+    width: 10em;
+    color: white;
+    border-radius: 5em;
+    border: none;
+    font-size: large;
+
+}
+#heading{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 400px;
+    width: 65vw;
+    color: white;
+    font-size:2em;
+    
+
+}
+.slideimage
+{
+    height: 90vh;
+    width: 98.9vw;
+    position:relative;
+}
+#img1{
+    height: 90vh;
+    background-image: url(./assests/avi-theret-2u6eLolV1JY-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#circle{
+    z-index: 4;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-direction: column;
+    height: 10em;
+    width: 10em;
+    position: fixed;
+    margin: 10px;
+    padding: 5px;
+    top: 0px;
+    background-color: aliceblue;
+}
+#email,#enq,#call,#whatsaap{
+    
+    height: 3.5em;
+    width: 7em;
+    margin-top: 20px;
+    color: black;
+}
+.con{
+    text-decoration: none;
+    font-size: larger;
+    color: rgb(244, 243, 242);
+}
+#enq{
+    font-weight: bolder;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: .7em;
+    margin-left: -10px;
+}
+#email{
+  
+    background-repeat: no-repeat;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: .7em;
+    margin-left: -10px;
+    
+}
+#service{
+    
+    text-align: center;
+    align-items: center;
+    height: 10em;
+    width: 50vw;
+}
+#whatsaap{
+    background-repeat: no-repeat;
+    display: flex;
+
+    color: white;
+   
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(37, 148, 42);
+    border-radius: .7em;
+    margin-left: -10px;
+
+}
+#call
+{ background-repeat: no-repeat;
+    display: flex;
+
+    color: white;
+   
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 49, 49);
+    border-radius: .7em;
+    margin-left: -10px;
+    
+}
+#contact{
+    margin-left: -10px;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    height: 20em;
+    width: 7em;
+    position: fixed;
+    bottom: 30vh;
+}
+#sercon{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 98.9vw;
+    background-color: rgb(253, 245, 235);
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    width: 98vw;
+}
+article{
+    display: flex;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid black;
+    height: auto;
+    width: 60vw;
+   
+}
+#homebut,#hotelbut,#flightbut{
+   
+    background-color: black;
+    height: 3em;
+    width: 9em;
+    border-radius: 1em;
+    color: whitesmoke;
+    margin: 20px;
+
+}
+#home,#hotel,#flight{
+    padding: 30px;
+    margin: 30px;
+}
+.line{
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 30px;
+
+}
+
+#navi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    gap: 5px;
+    height: 2em;
+    width: 3em;
+    margin-right: 10px;
+   
+}
+#navi:hover{
+    border: 2px solid white;
+    
+}
+nav{
+    margin-left: 10px;
+    z-index: 1;
+    bottom:93%;
+    position: fixed;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: hsl(215, 34%, 10%);
+    height: 7vh;
+    width: 99.9vw;
+}
+#popdec{
+    padding: 30px;
+    height: 100vh;
+    width: 98.9vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr  1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+
+}
+#pdii,#pdi,#alldes,#ftii{
+    
+    margin-top: 4em;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+   
+    
+}
+#amritar{
+    background-image: url(./assests/prerna-sharma-Lw9WQY9ETVU-unsplash.jpg);
+    box-shadow: 30px 30px 50px hsl(215, 34%, 10%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+ #sikkam{
+    background-image: url(./assests/istockphoto-120659960-1024x1024.jpg);
+    box-shadow: 30px 30px 50px hsl(215, 34%, 10%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+#aagra{
+    background-image: url(./assests/istockphoto-1850146397-1024x1024.jpg);
+    box-shadow: 30px 30px 50px hsl(215, 34%, 10%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: blue;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+#podecint{
+    padding: 50px;
+    height: 100vh;
+    width: 98.9vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+
+}
+#dubai{
+    background-image: url(./assests/istockphoto-1495926145-1024x1024.jpg);
+    box-shadow: 30px 30px 50px hsl(215, 34%, 10%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+#sydney{
+    background-image: url(./assests/istockphoto-1042487778-1024x1024.jpg);
+    box-shadow: 30px 30px 50px hsl(215, 34%, 10%);
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+#singapore{
+    
+    background-image: url(./assests/istockphoto-482380340-1024x1024.jpg);
+    box-shadow: 30px 30px 50px hsl(215, 34%, 10%);
+    background-color: blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.ftr{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    width: 24%;
+    font-size: small;
+}
+footer{
+
+
+    background-color: hsl(215, 34%, 10%);
+    color: white;
+    height: 20em;
+    width: 98.9vw;
+    display: flex;
+}
+ul{
+    margin-left: 20px;
+    /* list-style-type:square; */
+}
+li{
+    margin: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#end{
+    box-shadow:inset 30px 30px 50px hsl(215, 34%, 10%);
+  
+    padding: 2em;
+    color: white;
+    display: flex ;
+    font-size: small;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3em;
+  
+    height: 1em;
+    background-color: hsl(0, 0%, 100%);
+
+}
+span{
+  
+    color: white;
+   flex-grow: .1;
+}
+
+#gal{
+    display: flex;
+    justify-content: right ;
+    background-color:hsl(48, 32%, 91%) ;
+    height: 5em;
+    
+
+    width: 98vw;
+}
+#north,#east,#west,#south{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 101%;
+    border: none ;
+
+
+}
+#north:hover,#east:hover,#south:hover,#west:hover{
+    background-color:hsl(48, 32%, 91%) ;
+    
+    
+    
+    color: black;
+}
+
+#North_india
+{
+    
+     background-color: hsl(48, 32%, 91%);
+    height: 100vh;
+    width: 98.9vw;
+   
+   
+    
+    display: grid;
+     grid-template-columns: 2fr 2fr 2fr 2fr ;
+    grid-template-rows: 2fr 2fr ; 
+  
+
+  
+    
+}
+
+#delhi,#shimla,#kullu_and_manali,#agra,#mussorie,#dalhousie,#jnpark,#amritsar{
+    border: 10px solid white;
+    margin: 4em;
+    padding: 20px;
+    border:5px medium white;
+    color: white;
+    text-shadow: 1px 2px 0px tomato;
+
+    font-size: x-small;
+    margin-left: 5.9em;
+    margin-bottom: 20px;
+
+    
+    box-shadow: 30px 30px 50px hsl(215, 34%, 10%);
+    display: flex;
+    
+    align-items: end;
+    justify-content: end;
+}
+#delhi{
+    background-image: url(./assests/istockphoto-482018359-1024x1024.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+  
+}
+#shimla
+ { background-image: url(./assests/istockphoto-1318300669-1024x1024.jpg);
+    background-blend-mode:hue;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#kullu_and_manali{
+    background-image: url(./assests/istockphoto-1682183232-1024x1024.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#agra{
+    background-image: url(./assests/istockphoto-502530480-1024x1024.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#mussorie{
+    background-image: url(./assests/istockphoto-1516290687-1024x1024.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+
+}
+#dalhousie{
+    background-image: url(./assests/istockphoto-1524039296-1024x1024.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#jnpark
+{   background-image: url(./assests/istockphoto-1287385395-1024x1024.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+#amritsar{
+    background-image: url(./assests/istockphoto-943663158-1024x1024.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
