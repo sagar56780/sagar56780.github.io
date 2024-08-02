@@ -594,12 +594,100 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /*-------------------------------------
         9. Portfolio
 --------------------------------------*/
+
+.slideshow-container {
+
+    width: 55vw;
+    height: 85vh;
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+  }
+
+  .image-container {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    animation: slide 9s infinite; /* 9s total for 3 images, adjust as needed */
+  }
+
+  .image-container img {
+    width: 100%; /* Width of each image */
+    height: 100%; /* Height of each image */
+    object-fit: cover;
+  }
+
+  @keyframes slide {
+    0% { left: 0; }
+    20% { left: 0; }  /* Image 1 visible for 3s */
+    33% { left: -100%; }
+    53% { left: -100%; } /* Image 2 visible for 3s */
+    66% { left: -200%; }
+    86% { left: -200%; } /* Image 3 visible for 3s */
+    100% { left: 0; }
+  }
+
+  .heading {
+    width: 32vw ;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+   
+  }
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+      background-color: lightgray;
+    }
+    .slideshow-container {
+
+        width: 100vw;
+        height: 85vh;
+        overflow: hidden; /* Hide overflow */
+        position: relative;
+      }
+    
+      .image-container {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        animation: slide 9s infinite; /* 9s total for 3 images, adjust as needed */
+      }
+    
+      .image-container img {
+        width: 100%; /* Width of each image */
+        height: 100%; /* Height of each image */
+        object-fit: cover;
+      }
+      .heading {
+        width: 100vw ;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+       
+      }
+
+  }
 .portfolio {
+  
+
     padding:  50px 0 100px;
     border:  1px solid #e5ebf2;
 }
 
-.portfolio-content {padding-top: 100px;}
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;padding-top: 100px;}
 
 /* ---- .item ---- */
 .isotope:after {
