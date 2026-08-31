@@ -3,6 +3,9 @@ import SectionHeader from '../components/SectionHeader';
 import usePageMeta from '../hooks/usePageMeta';
 import contentService from '../services/contentService';
 
+const FORMRSPREE_ENDPOINT =
+  (import.meta.env.VITE_FORMSPREE_ENDPOINT || 'https://formspree.io/f/mppzqpnz').trim();
+
 const initialForm = {
   name: '',
   email: '',
@@ -35,7 +38,21 @@ const ContactPage = () => {
     setStatus('');
 
     try {
-      await contentService.submitContact(form);
+      const res = await fetch(FORMRSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `New portfolio message from ${form.name}`
+        })
+      });
+
+      if (!res.ok) {
+        throw new Error(`Formspree responded ${res.status}`);
+      }
+
       setStatus('Message sent successfully.');
       setForm(initialForm);
     } catch {
