@@ -338,15 +338,10 @@ img {
   }
 }
 
-.hero-image,
 .about-image,
 .profile-preview {
   object-fit: cover;
   border-radius: 1.2rem;
-}
-
-.about-image,
-.profile-preview {
   width: min(330px, 100%);
   border: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
   box-shadow: var(--shadow);
