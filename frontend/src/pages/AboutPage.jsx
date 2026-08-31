@@ -60,14 +60,16 @@ const AboutPage = () => {
           </a>
         </article>
 
-        <article className="card reveal-up">
+        <article className="card reveal-up about-photo-card">
           {about?.profileImageUrl ? (
-            <img
-              src={buildAssetUrl(about.profileImageUrl)}
-              alt={about?.fullName}
-              className="about-image"
-              loading="lazy"
-            />
+            <div className="about-image-ring">
+              <img
+                src={buildAssetUrl(about.profileImageUrl)}
+                alt={about?.fullName}
+                className="about-image"
+                loading="lazy"
+              />
+            </div>
           ) : (
             <div className="avatar-fallback large">SK</div>
           )}
