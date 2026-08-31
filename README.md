@@ -1,15 +1,24 @@
-# Sagar Kumar Portfolio (GitHub Pages Static Mode)
+# Sagar Kumar Portfolio — Full-Stack & QA Automation Engineer
 
-This project is now configured to run fully on **GitHub Pages only**.
+A modern, professional single-page-style portfolio running fully on **GitHub Pages**.
+Themed around the **SDLC / engineering lifecycle** to showcase QA automation,
+API testing, and CI/CD expertise alongside full-stack development.
 
-- No Node.js backend required for runtime
-- No MongoDB required for runtime
-- Public site + admin panel run entirely in the browser
-- All editable content is stored in browser `localStorage`
+## Features
+
+- **Engineering Lifecycle themed** sections (Requirements → Design → Development → Testing → Deployment → Maintenance)
+- **Terminal-style hero** with typewriter animation and live metrics
+- **Dark / light theme** with toggle (dark by default)
+- Reactive scroll-reveal animations and hover micro-interactions
+- Projects, experience, skills (grouped by discipline), and blog
+- **Admin panel** (localStorage-backed) to manage content live
+- Contact form that saves messages for review in the admin panel
 
 ## How It Works
 
-- Public pages read data from localStorage.
+Static-only, runs fully in the browser:
+
+- Public pages read data from localStorage (seeded from `defaultContent.js`).
 - Admin panel updates localStorage directly.
 - Uploaded images/resume are stored as data URLs in localStorage.
 - Contact form submissions are saved in localStorage (current browser only).
@@ -25,7 +34,7 @@ Because this is static-only:
 ## Stack
 
 - React + Vite + React Router (`HashRouter` for Pages compatibility)
-- CSS animations + responsive layout
+- CSS animations + responsive layout (Space Grotesk, Source Sans 3, JetBrains Mono)
 - GitHub Actions for Pages deployment
 
 ## Local Development
@@ -58,12 +67,6 @@ VITE_BASE_PATH=/
 npm --prefix frontend run build
 ```
 
-or Pages-targeted build:
-
-```bash
-npm --prefix frontend run build:pages
-```
-
 Output: `frontend/dist`
 
 ## GitHub Pages Deployment
@@ -90,6 +93,9 @@ If repository is `sagarkumar446.github.io`, URL will be:
 - `frontend/public/robots.txt`
 - `frontend/public/sitemap.xml`
 
-## Note About Backend Folder
+## Directory Note
 
-The `backend/` folder may still exist in repo history/workspace, but it is **not required** for GitHub Pages static deployment.
+The old Bootstrap template (`index.html`, `assets/`) and the `backend/` folder
+were removed — they are **not required** for GitHub Pages static deployment. The
+live site is built and deployed from `frontend/`.
+

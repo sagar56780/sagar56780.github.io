@@ -4,7 +4,7 @@ const THEME_KEY = 'portfolio_theme';
 const ThemeContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(localStorage.getItem(THEME_KEY) || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem(THEME_KEY) || 'dark');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

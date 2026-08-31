@@ -32,7 +32,13 @@ const SkillsPage = () => {
 
   return (
     <section>
-      <SectionHeader title="Skills" subtitle="Grouped by category with proficiency indicators." />
+      <SectionHeader
+        title="Skills"
+        subtitle="Grouped by engineering discipline — testing, automation, CI/CD, and full-stack."
+        />
+      <p className="subtle skills-note reveal-up">
+        Proficiency levels reflect hands-on experience across QA automation, API testing, CI/CD, and full-stack development.
+      </p>
 
       <div className="grid cards-2 stagger-group">
         {Object.entries(grouped).map(([category, skills]) => (

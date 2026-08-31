@@ -40,7 +40,7 @@ const AboutPage = () => {
     <section>
       <SectionHeader
         title="About Me"
-        subtitle="Detailed introduction, technology focus, and capabilities."
+        subtitle="QA Automation Engineer and Full-Stack developer focused on quality across the SDLC."
       />
 
       <div className="about-grid stagger-group">

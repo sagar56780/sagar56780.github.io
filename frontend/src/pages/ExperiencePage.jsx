@@ -32,7 +32,10 @@ const ExperiencePage = () => {
 
   return (
     <section>
-      <SectionHeader title="Experience" subtitle="Roles, responsibilities, and impact." />
+      <SectionHeader
+        title="Experience"
+        subtitle="Roles spanning QA automation, API testing, and full-stack development."
+      />
 
       <div className="timeline stagger-group">
         {items.map((item) => (
