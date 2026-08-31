@@ -41,16 +41,34 @@ const TypingHero = ({ about }) => {
   }, [text, deleting, roleIndex]);
 
   return (
-    <div className="hero reveal-up">
+    <div className="hero hero-center reveal-up">
+      <div className="hero-avatar-block">
+        {about?.profileImageUrl ? (
+          <div className="avatar-orbit">
+            <span className="orbit-dot" />
+            <div className="hero-image-ring">
+              <img
+                src={buildAssetUrl(about.profileImageUrl)}
+                alt={about.fullName || 'Sagar Kumar'}
+                className="hero-image"
+                loading="lazy"
+              />
+            </div>
+            <span className="orbit-dot orbit-dot-2" />
+          </div>
+        ) : (
+          <div className="avatar-fallback">SK</div>
+        )}
+      </div>
+
       <div className="hero-copy">
         <div className="terminal-bar">
           <span className="dot red" />
           <span className="dot yellow" />
           <span className="dot green" />
-          <span className="terminal-title">sagar@portfolio</span>
+          <span className="terminal-title">sagar@portfolio ~ $ whoami</span>
         </div>
 
-        <p className="eyebrow">$ whoami</p>
         <h1>{about?.fullName || 'Sagar Kumar'}</h1>
 
         <div className="type-row">
@@ -98,27 +116,6 @@ const TypingHero = ({ about }) => {
             <strong>24</strong>
             <span>REST Endpoints</span>
           </div>
-        </div>
-      </div>
-
-      <div className="hero-image-wrap">
-        {about?.profileImageUrl ? (
-          <div className="hero-image-ring">
-            <img
-              src={buildAssetUrl(about.profileImageUrl)}
-              alt={about.fullName || 'Sagar Kumar'}
-              className="hero-image"
-              loading="lazy"
-            />
-          </div>
-        ) : (
-          <div className="avatar-fallback">SK</div>
-        )}
-        <div className="terminal-code">
-          <span className="code-line"><span className="kw">const</span> <span className="fn">automate</span> = <span className="fn">async</span> () =&gt; &#123;</span>
-          <span className="code-line code-indent">await <span className="fn">page.e2eTests</span>(jobs);</span>
-          <span className="code-line code-indent"><span className="str">'quality 🔒 every release'</span>;</span>
-          <span className="code-line">&#125;;</span>
         </div>
       </div>
     </div>
