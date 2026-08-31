@@ -242,20 +242,58 @@ img {
 .hero-image-wrap {
   display: grid;
   place-items: center;
+  position: relative;
+}
+
+.hero-image-ring {
+  position: relative;
+  width: min(300px, 78vw);
+  height: min(300px, 78vw);
+  padding: 6px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--primary), var(--accent), var(--accent-2), var(--primary));
+  box-shadow: var(--shadow);
+  animation: softFloat 4.8s ease-in-out infinite;
+}
+
+.hero-image-ring::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary) 28%, transparent), transparent 70%);
+  z-index: -1;
+  filter: blur(18px);
+}
+
+.hero-image-ring::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--surface) 15%, transparent), inset 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-image,
 .about-image,
 .profile-preview {
-  width: min(330px, 100%);
-  border-radius: 1.2rem;
   object-fit: cover;
-  border: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
-  box-shadow: var(--shadow);
+  border-radius: 1.2rem;
 }
 
-.hero-image {
-  animation: softFloat 4.8s ease-in-out infinite;
+.about-image,
+.profile-preview {
+  width: min(330px, 100%);
+  border: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+  box-shadow: var(--shadow);
 }
 
 .avatar-fallback {

@@ -103,12 +103,14 @@ const TypingHero = ({ about }) => {
 
       <div className="hero-image-wrap">
         {about?.profileImageUrl ? (
-          <img
-            src={buildAssetUrl(about.profileImageUrl)}
-            alt={about.fullName || 'Sagar Kumar'}
-            className="hero-image"
-            loading="lazy"
-          />
+          <div className="hero-image-ring">
+            <img
+              src={buildAssetUrl(about.profileImageUrl)}
+              alt={about.fullName || 'Sagar Kumar'}
+              className="hero-image"
+              loading="lazy"
+            />
+          </div>
         ) : (
           <div className="avatar-fallback">SK</div>
         )}
