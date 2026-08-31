@@ -20,9 +20,9 @@ body {
   color: var(--text);
   line-height: 1.62;
   background:
-    radial-gradient(circle at 10% 6%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 32%),
-    radial-gradient(circle at 90% 24%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 38%),
-    linear-gradient(170deg, color-mix(in srgb, var(--bg) 90%, #ffffff 10%), var(--bg));
+    radial-gradient(circle at 8% 4%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 34%),
+    radial-gradient(circle at 94% 26%, color-mix(in srgb, var(--accent-2) 20%, transparent), transparent 40%),
+    linear-gradient(170deg, color-mix(in srgb, var(--bg) 92%, var(--surface-2) 8%), var(--bg));
 }
 
 body::before,
