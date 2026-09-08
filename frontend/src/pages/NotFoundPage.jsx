@@ -4,7 +4,8 @@ import usePageMeta from '../hooks/usePageMeta';
 const NotFoundPage = () => {
   usePageMeta({
     title: '404 | Page Not Found',
-    description: 'The requested page could not be found.'
+    description: 'The requested page could not be found.',
+    robots: 'noindex, follow'
   });
 
   return (

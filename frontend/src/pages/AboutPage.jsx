@@ -11,8 +11,10 @@ const AboutPage = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: 'About | Sagar Kumar',
-    description: 'Read the detailed introduction, technical stack, and core strengths of Sagar Kumar.'
+    title: 'About Sagar Kumar | QA Automation & Full-Stack Developer',
+    description:
+      'About Sagar Kumar — QA Automation Engineer at Webkul skilled in Playwright, REST API testing, and CI/CD, with full-stack development across Java, Spring Boot, React, and SQL.',
+    path: '/about'
   });
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const AboutPage = () => {
     <section>
       <SectionHeader
         title="About Me"
-        subtitle="QA Automation Engineer and Full-Stack developer focused on quality across the SDLC."
+        subtitle="QA Automation Engineer and Full-Stack Developer focused on quality across the SDLC."
       />
 
       <div className="about-grid stagger-group">
@@ -65,7 +67,7 @@ const AboutPage = () => {
             <div className="about-image-ring">
               <img
                 src={buildAssetUrl(about.profileImageUrl)}
-                alt={about?.fullName}
+                alt="Sagar Kumar — QA Automation Engineer and Full-Stack Developer"
                 className="about-image"
                 loading="lazy"
               />

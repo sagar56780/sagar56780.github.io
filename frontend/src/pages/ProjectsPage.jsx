@@ -10,8 +10,10 @@ const ProjectsPage = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: 'Projects | Sagar Kumar',
-    description: 'Explore software projects by Sagar Kumar with technology stack, GitHub links, and live demos.'
+    title: 'Projects | Sagar Kumar — QA Automation & Full-Stack Development',
+    description:
+      'Explore projects by Sagar Kumar, a QA Automation Engineer and full-stack developer — including Playwright E2E automation and REST API test cases for Krayin CRM, plus Spring Boot and React applications.',
+    path: '/projects'
   });
 
   useEffect(() => {

@@ -19,8 +19,10 @@ const ContactPage = () => {
   const [about, setAbout] = useState(null);
 
   usePageMeta({
-    title: 'Contact | Sagar Kumar',
-    description: 'Contact Sagar Kumar through the portfolio contact form or social profiles.'
+    title: 'Contact Sagar Kumar | QA Automation & Full-Stack Developer',
+    description:
+      'Contact Sagar Kumar, QA Automation Engineer and full-stack developer, about QA automation, REST API testing, CI/CD, or full-stack development opportunities.',
+    path: '/contact'
   });
 
   useEffect(() => {

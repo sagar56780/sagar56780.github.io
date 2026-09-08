@@ -1,5 +1,5 @@
-import { Suspense, lazy } from 'react';
-import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
+import { Suspense, lazy, useEffect } from 'react';
+import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
@@ -38,11 +38,22 @@ const PublicLayout = () => {
   );
 };
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   useScrollReveal();
 
   return (
     <Suspense fallback={<Loader fullScreen />}>
+      <ScrollToTop />
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />

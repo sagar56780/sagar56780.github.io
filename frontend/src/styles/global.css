@@ -82,6 +82,12 @@ a:hover {
   color: var(--primary-strong);
 }
 
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -847,6 +853,18 @@ img {
   max-width: 56ch;
   line-height: 1.6;
   margin: 0 auto;
+}
+
+.hero-headline {
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero-tech-line {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hero-actions {

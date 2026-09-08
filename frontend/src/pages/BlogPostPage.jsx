@@ -11,7 +11,26 @@ const BlogPostPage = () => {
 
   usePageMeta({
     title: blog ? `${blog.title} | Sagar Kumar Blog` : 'Blog Post | Sagar Kumar',
-    description: blog?.excerpt || 'Blog post by Sagar Kumar.'
+    description: blog?.excerpt || 'Blog post by Sagar Kumar.',
+    path: blog ? `/blog/${blog.slug}` : '/blog',
+    jsonLd: blog
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: blog.title,
+          description: blog.excerpt || undefined,
+          datePublished: blog.publishedAt || blog.createdAt,
+          author: {
+            '@type': 'Person',
+            name: 'Sagar Kumar',
+            url: 'https://sagarkumar446.github.io/'
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://sagarkumar446.github.io/blog/${blog.slug}`
+          }
+        }
+      : null
   });
 
   useEffect(() => {

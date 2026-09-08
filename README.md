@@ -33,7 +33,7 @@ Because this is static-only:
 
 ## Stack
 
-- React + Vite + React Router (`HashRouter` for Pages compatibility)
+- React + Vite + React Router (`BrowserRouter` with clean URLs; `404.html` SPA fallback for GitHub Pages)
 - CSS animations + responsive layout (Space Grotesk, Source Sans 3, JetBrains Mono)
 - GitHub Actions for Pages deployment
 
@@ -92,6 +92,20 @@ If repository is `sagarkumar446.github.io`, URL will be:
 
 - `frontend/public/robots.txt`
 - `frontend/public/sitemap.xml`
+- `frontend/src/hooks/usePageMeta.js` — per-page title, description, canonical, Open Graph, Twitter, and JSON-LD.
+- Per-page JSON-LD: `Person` (homepage), `BlogPosting` (blog posts).
+
+## Routing & GitHub Pages
+
+The app uses `BrowserRouter` with clean URLs (`/`, `/about`, `/projects`, `/experience`,
+`/skills`, `/blog`, `/contact`). GitHub Pages has no server-side rewrite rules, so the
+build copies `dist/index.html` to `dist/404.html`. Unknown paths are served the SPA,
+letting React Router render the correct route. Old `#/route` hash links are
+automatically migrated to clean URLs on load (`src/main.jsx`).
+
+> Note: deep links still technically respond with HTTP 404 on GitHub Pages while
+> rendering the correct SPA content. This is the standard SPA-on-Pages limitation;
+> indexable content is served, but a custom domain with real rewrites would remove it.
 
 ## Directory Note
 

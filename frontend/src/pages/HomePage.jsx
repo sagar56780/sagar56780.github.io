@@ -8,11 +8,13 @@ import contentService from '../services/contentService';
 import { SDLC_PIPELINE } from '../data/defaultContent';
 
 const ROLES = [
-  'Full-Stack & QA Automation Engineer',
-  'Playwright · E2E Test Automation',
+  'Playwright E2E Test Automation',
   'REST API Testing · Postman · PHPUnit',
-  'CI/CD · GitHub Actions · Docker'
+  'CI/CD · GitHub Actions · Docker',
+  'Full-Stack Developer · Java · Spring Boot · React'
 ];
+
+const HERO_TECH = ['Java', 'Spring Boot', 'React', 'Playwright', 'REST APIs', 'CI/CD'];
 
 const TypingHero = ({ about }) => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -49,9 +51,9 @@ const TypingHero = ({ about }) => {
             <div className="hero-image-ring">
               <img
                 src={buildAssetUrl(about.profileImageUrl)}
-                alt={about.fullName || 'Sagar Kumar'}
+                alt="Sagar Kumar — QA Automation Engineer and Full-Stack Developer"
                 className="hero-image"
-                loading="lazy"
+                fetchpriority="high"
               />
             </div>
             <span className="orbit-dot orbit-dot-2" />
@@ -71,32 +73,60 @@ const TypingHero = ({ about }) => {
 
         <h1>{about?.fullName || 'Sagar Kumar'}</h1>
 
+        <h2 className="hero-headline">
+          {about?.headline || 'QA Automation Engineer & Full-Stack Developer'}
+        </h2>
+
         <div className="type-row">
           <span className="prompt">$</span>
           <p className="typewriter">{text}</p>
           <span className="caret" />
         </div>
 
+        <div className="tag-list hero-tech-line">
+          {HERO_TECH.map((tech) => (
+            <span key={tech} className="tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+
         <p className="subtle hero-bio">
-          QA Automation Engineer at Webkul — building reliable Playwright E2E suites, testing REST APIs,
-          and driving CI/CD. Full-stack developer who understands the entire SDLC.
+          QA Automation Engineer at Webkul — building reliable Playwright E2E suites, testing REST APIs, and
+          driving CI/CD. Full-stack developer who understands the entire SDLC.
         </p>
 
         <div className="row gap-sm wrap hero-actions">
           <Link to="/projects" className="btn">
-            View Work
-          </Link>
-          <Link to="/contact" className="btn secondary">
-            Contact Me
+            View Projects
           </Link>
           <a
             href={contentService.getResumeDownloadUrl()}
-            className="btn ghost"
+            className="btn secondary"
             target="_blank"
             rel="noreferrer"
           >
             Download Resume
           </a>
+          <a
+            href={about?.socials?.github || 'https://github.com/sagarkumar446'}
+            className="btn ghost"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href={about?.socials?.linkedin || 'https://www.linkedin.com/in/sagar-kumar-java-developer'}
+            className="btn ghost"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <Link to="/contact" className="btn ghost">
+            Contact Me
+          </Link>
         </div>
 
         <div className="hero-stats">
@@ -163,9 +193,10 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: 'Sagar Kumar | Full-Stack & QA Automation Engineer',
+    title: 'Sagar Kumar | QA Automation Engineer & Full-Stack Developer',
     description:
-      'Portfolio of Sagar Kumar — QA Automation Engineer at Webkul. Playwright, API testing, CI/CD, and full-stack development.'
+      'QA Automation Engineer at Webkul specializing in Playwright E2E automation, REST API testing, CI/CD, and full-stack development with Java, Spring Boot and React.',
+    path: '/'
   });
 
   useEffect(() => {

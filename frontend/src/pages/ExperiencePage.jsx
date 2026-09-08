@@ -9,8 +9,10 @@ const ExperiencePage = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: 'Experience | Sagar Kumar',
-    description: 'Professional experience, roles, and achievements of Sagar Kumar.'
+    title: 'Experience | Sagar Kumar — QA Automation Engineer at Webkul',
+    description:
+      'Professional experience of Sagar Kumar — QA Automation Engineer at Webkul working on Playwright E2E automation and REST API testing for Krayin CRM, with earlier roles in full-stack development.',
+    path: '/experience'
   });
 
   useEffect(() => {

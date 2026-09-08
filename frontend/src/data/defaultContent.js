@@ -1,11 +1,11 @@
 export const DEFAULT_ABOUT = {
   _id: 'about-1',
   fullName: 'Sagar Kumar',
-  headline: 'Full-Stack & QA Automation Engineer',
+  headline: 'QA Automation Engineer & Full-Stack Developer',
   shortBio:
-    'QA Automation Engineer crafting reliable test suites and full-stack web apps — Playwright, React, Spring Boot, CI/CD on GitHub Actions, REST API testing with Postman.',
+    'QA Automation Engineer at Webkul specializing in Playwright E2E automation, REST API testing, and CI/CD, with full-stack development across Java, Spring Boot, and React.',
   detailedBio:
-    'I am a QA Automation Engineer with ~2 years of experience in manual and automation testing at Webkul, working on open-source products like Krayin CRM and Bagisto. I build Playwright E2E suites (Page Object Model), test REST APIs with Postman and PHPUnit, and drive CI/CD with GitHub Actions and Docker. Alongside testing, I build full-stack applications with React, Spring Boot, and relational databases, giving me a well-rounded view of the entire SDLC.',
+    "I am a QA Automation Engineer at Webkul with over 2 years of experience in manual and automation testing, working on open-source products like Krayin CRM and Bagisto. I build Playwright E2E suites using the Page Object Model, test REST APIs with Postman and PHPUnit, and drive CI/CD with GitHub Actions and Docker. Alongside testing, I build full-stack applications with React, Spring Boot, and relational databases, which gives me a well-rounded view of the entire SDLC.",
   techStack: [
     'Playwright',
     'JavaScript',

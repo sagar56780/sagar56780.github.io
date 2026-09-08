@@ -9,8 +9,10 @@ const SkillsPage = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: 'Skills | Sagar Kumar',
-    description: 'Skills grouped by categories across frontend, backend, databases, and tools.'
+    title: 'Skills | Sagar Kumar — Java, Spring Boot, React, Playwright',
+    description:
+      'Technical skills of Sagar Kumar across QA automation (Playwright, Selenium, PHPUnit), API testing (Postman, REST), CI/CD (GitHub Actions, Docker), and full-stack development (Java, Spring Boot, React, SQL).',
+    path: '/skills'
   });
 
   useEffect(() => {

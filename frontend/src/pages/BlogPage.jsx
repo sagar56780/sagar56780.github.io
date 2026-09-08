@@ -10,8 +10,10 @@ const BlogPage = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: 'Blog | Sagar Kumar',
-    description: 'Technical insights and articles by Sagar Kumar.'
+    title: 'Blog | Sagar Kumar — Testing, Automation & Development',
+    description:
+      'Technical blog by Sagar Kumar covering Playwright automation, REST API testing, Java, Spring Boot, React, CI/CD, GitHub Actions, and software quality engineering.',
+    path: '/blog'
   });
 
   useEffect(() => {
